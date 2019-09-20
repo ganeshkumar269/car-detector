@@ -3,9 +3,6 @@ numpy
 scipy
 opencv-python
 opencv-contrib-python
-libsm6
-libxext6
-libxrender-dev
 pillow
 matplotlib
 h5py
