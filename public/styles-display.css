@@ -12,3 +12,14 @@ img {
     margin-right: auto;
     width: 40%;
 }
+
+#go-again-btn {
+    color : white;
+    height: 30px;
+    width:  100px;
+    background-color: #2d9de7;
+    border : 1px solid #ffffff;
+    border-radius : 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px gray;
+}
