@@ -1,0 +1,14 @@
+body {
+    background-color: #101010;
+    color:#009578;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}

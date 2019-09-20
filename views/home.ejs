@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Upload your Image
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id = "thediv">
+            <form enctype="multipart/form-data" action="/upload" method="post">
+                <input type="file" id="real-file" hidden="hidden" name="photo">
+                <button type="button" id="custom-button">Choose an Image</button>
+                <p>No file chosen, yet</p>
+                <button type="submit" id="submit-btn" hidden="hidden"></button>
+                <button type="button" id="custom-submit">Upload</button>
+            </form>
+        </div>
+    </body>
+    <script src = "script.js"></script>
+</html>

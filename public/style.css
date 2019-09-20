@@ -1,0 +1,35 @@
+body {
+    background-color: #101010;
+    font-family: 'Montserrat',sans-serif;
+    color : white;
+    text-align: center;
+}
+#thediv {
+    display: inline-block;
+    width: 300px;
+    margin-top:200px;
+}
+#custom-button {
+    color : white;
+    height: 40px;
+    background-color: #009578;
+    border : 1px solid #ffffff;
+    border-radius : 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px gray;
+}
+
+#custom-button {
+    background-color: #00b28f;
+}
+
+#custom-submit {
+    color : white;
+    height: 30px;
+    width:  60px;
+    background-color: #2d9de7;
+    border : 1px solid #ffffff;
+    border-radius : 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px gray;
+}
