@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-const fs = require('fs');
 var app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -37,6 +36,7 @@ app.get("/",(request,response)=>{
 app.get('/display',(request,response)=>{
     console.log("display request recieved");
     var filename = "output." + name;
+    var fs = require('fs');
     var count =0 ;
     // fs.readFileSync("tmp.txt",(err,data)=>{
     //     if(err) throw err;
@@ -49,17 +49,6 @@ app.get('/display',(request,response)=>{
 });
 app.post('/upload',multer(multerConf).single('photo'),(request,response)=>{
     const exec = require("child_process").execSync;
-    var model_exists = fs.readFileSync("model_exists.txt").toString();
-    console.log("ResNet Model Exists:" + model_exists);
-    if(model_exists != "true"){
-        var model_result = exec("gdown --id 1iQOYdqj1K5XiTmoNALvKTAxjt9-pStMi --output resnet.h5");
-        console.log(model_result.toString());
-        if(typeof(model_result) !== Error)
-            fs.writeFileSync("model_exists.txt","true",(err)=>{
-                if(err) throw err;
-                else console.log("Resnet Has been succesfully downloaded");
-            });
-    }
     var result = exec("python ./imai.py " + name);
     console.log(result.toString("utf8"));
     response.redirect('/display');
