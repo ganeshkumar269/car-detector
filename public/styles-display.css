@@ -23,3 +23,14 @@ img {
     cursor: pointer;
     box-shadow: 2px 2px gray;
 }
+
+#download-btn {
+    color : white;
+    height: 30px;
+    width:  100px;
+    background-color: #822ef0;
+    border : 1px solid #ffffff;
+    border-radius : 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px gray;
+}

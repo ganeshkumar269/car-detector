@@ -53,6 +53,12 @@ app.post('/upload',multer(multerConf).single('photo'),(request,response)=>{
     console.log(result.toString("utf8"));
     response.redirect('/display');
 });
+
+app.get("/download" , (request,response)=>{
+    response.download("./public/output."+name);
+});
+
+
 app.listen(process.env.PORT || 3000 , (err)=>{
     if(err) throw err;
     console.log("Server Started in port " + 3000);
